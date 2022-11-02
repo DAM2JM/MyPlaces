@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstViewController: UITableViewController {
+class FirstViewController: UITableViewController, ManagerPlacesObserver {
     
     let manager = ManagerPlaces.shared()
     override func viewDidLoad() {
@@ -16,8 +16,10 @@ class FirstViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
+        manager.addObserver(object: self)
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newPlace))
     }
 
     // MARK: - Table view data source
@@ -50,8 +52,6 @@ class FirstViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
       
             return 100
-      
-        
         
     }
     
@@ -62,9 +62,6 @@ class FirstViewController: UITableViewController {
         
         let wt: CGFloat = tableView.bounds.size.width
         
-        
-        // UILabel and UIImageView
-        //if(indexPath.row < (manager.GetCount()-1)){
         let fuente: UIFont = UIFont(name: "Arial", size: 12)!
         
         let fuenteBold: UIFont = UIFont(name: "Arial-BoldMT", size: 12)!
@@ -76,22 +73,18 @@ class FirstViewController: UITableViewController {
         label.text = place.name
         label.sizeToFit()
         cell.contentView.addSubview(label)
-        
-        /*var labelDes: UILabel
-        labelDes = UILabel(frame: CGRect(x:20,y:40,width:wt,height:40))
-        labelDes.font = fuente
-        labelDes.numberOfLines = 2
-        labelDes.text = place.description
-        labelDes.sizeToFit()
-        cell.contentView.addSubview(labelDes)*/
-        //}
-        
-        //let imageIcon: UIImageView = UIImageView(image: UIImage(named:"sun.png"))
-        //imageIcon.frame = CGRect(x:10, y:50, width:50, height:50)
-        //cell.contentView.addSubview(imageIcon)
-        
+                
         
         return cell
     }
-
+    
+    @objc func newPlace(){
+        manager.setPlaceSelected(position: -1)
+        performSegue(withIdentifier: "showDetail", sender: self)
+    }
+    
+    func onPlacesChange(){
+        let view: UITableView = (self.view as? UITableView)!;
+        view.reloadData()
+    }
 }

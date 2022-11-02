@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let manager = ManagerPlaces.shared()
 
         var pl = Place(name: "Test Place 1", description: "More info 1", image_in: nil )
-        var p2 = Place(name: "Test Place 2", description: "More info 1", image_in: nil )
-        var p3 = Place(name: "Test Place 3", description: "More info 1", image_in: nil )
+        var p2 = Place(name: "Test Place 2", description: "More info 2", image_in: nil )
+        var p3 = Place(name: "Test Place 3", description: "More info 3", image_in: nil )
         manager.append(value: pl)
         manager.append(value: p2)
         manager.append(value: p3)
@@ -38,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
 
 }
 

@@ -17,6 +17,8 @@
 		0856E1D428EEF35100A2EAF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0856E1D228EEF35100A2EAF1 /* LaunchScreen.storyboard */; };
 		0856E1FA28EEF95000A2EAF1 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856E1F928EEF95000A2EAF1 /* DetailController.swift */; };
 		08CB529728F425F800DE9A21 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB529628F425F800DE9A21 /* FirstViewController.swift */; };
+		08F1B83E29093AB2002615F8 /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F1B83C29093AB2002615F8 /* FileSystem.swift */; };
+		08F1B83F29093AB2002615F8 /* ManagerLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F1B83D29093AB2002615F8 /* ManagerLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		0856E1E428EEF35100A2EAF1 /* MyPlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPlacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0856E1F928EEF95000A2EAF1 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		08CB529628F425F800DE9A21 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		08F1B83C29093AB2002615F8 /* FileSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
+		08F1B83D29093AB2002615F8 /* ManagerLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		0856E1BB28EEF34E00A2EAF1 = {
 			isa = PBXGroup;
 			children = (
+				08F1B83C29093AB2002615F8 /* FileSystem.swift */,
 				08189F7728EF1C8F00D2321F /* Place.swift */,
 				08189F7928EF1D5100D2321F /* PlaceTourist.swift */,
 				08189F7B28EF1E1900D2321F /* ManagerPlaces.swift */,
@@ -102,6 +107,7 @@
 		0856E1C628EEF34E00A2EAF1 /* MyPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				08F1B83D29093AB2002615F8 /* ManagerLocation.swift */,
 				0856E1C728EEF34E00A2EAF1 /* AppDelegate.swift */,
 				0856E1C928EEF34E00A2EAF1 /* SceneDelegate.swift */,
 				0856E1CD28EEF34E00A2EAF1 /* Main.storyboard */,
@@ -245,8 +251,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F1B83E29093AB2002615F8 /* FileSystem.swift in Sources */,
 				08189F7A28EF1D5100D2321F /* PlaceTourist.swift in Sources */,
 				0856E1FA28EEF95000A2EAF1 /* DetailController.swift in Sources */,
+				08F1B83F29093AB2002615F8 /* ManagerLocation.swift in Sources */,
 				0856E1C828EEF34E00A2EAF1 /* AppDelegate.swift in Sources */,
 				0856E1CA28EEF34E00A2EAF1 /* SceneDelegate.swift in Sources */,
 				08189F7C28EF1E1900D2321F /* ManagerPlaces.swift in Sources */,
